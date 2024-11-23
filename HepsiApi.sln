@@ -9,15 +9,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{474222B2-4
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{DA099605-8D18-446F-A305-86396B5E93E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HepsiApi.Domain", "Core\HepsiApi.Domain\HepsiApi.Domain.csproj", "{868ADB54-DB91-4A26-BA9C-CC9BB50C4A7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HepsiApi.Domain", "Core\HepsiApi.Domain\HepsiApi.Domain.csproj", "{868ADB54-DB91-4A26-BA9C-CC9BB50C4A7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HepsiApi.Application", "Core\HepsiApi.Application\HepsiApi.Application.csproj", "{1CD64D5F-EAAE-4A51-B01D-CA14F8DA7D98}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HepsiApi.Application", "Core\HepsiApi.Application\HepsiApi.Application.csproj", "{1CD64D5F-EAAE-4A51-B01D-CA14F8DA7D98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HepsiApi.Infrastructure", "Infrastructure\HepsiApi.Infrastructure\HepsiApi.Infrastructure.csproj", "{9BC470BF-F770-472E-A3EB-F9E589C49E63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HepsiApi.Infrastructure", "Infrastructure\HepsiApi.Infrastructure\HepsiApi.Infrastructure.csproj", "{9BC470BF-F770-472E-A3EB-F9E589C49E63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HepsiApi.Persistence", "Infrastructure\HepsiApi.Persistence\HepsiApi.Persistence.csproj", "{1EB430CB-0188-4D86-87CA-350260E4F81E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HepsiApi.Persistence", "Infrastructure\HepsiApi.Persistence\HepsiApi.Persistence.csproj", "{1EB430CB-0188-4D86-87CA-350260E4F81E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HepsiApi.WEBAPI", "Presentation\HepsiApi.WEBAPI\HepsiApi.WEBAPI.csproj", "{DA9A5C22-006F-4866-8605-41BE17C98551}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HepsiApi.WEBAPI", "Presentation\HepsiApi.WEBAPI\HepsiApi.WEBAPI.csproj", "{DA9A5C22-006F-4866-8605-41BE17C98551}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HepsiApi.Mapper", "Core\HepsiApi.Mapper\HepsiApi.Mapper.csproj", "{8BFF3D64-ECE4-4565-A816-2190C1E8DC19}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{DA9A5C22-006F-4866-8605-41BE17C98551}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA9A5C22-006F-4866-8605-41BE17C98551}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA9A5C22-006F-4866-8605-41BE17C98551}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BFF3D64-ECE4-4565-A816-2190C1E8DC19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BFF3D64-ECE4-4565-A816-2190C1E8DC19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BFF3D64-ECE4-4565-A816-2190C1E8DC19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BFF3D64-ECE4-4565-A816-2190C1E8DC19}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +61,7 @@ Global
 		{9BC470BF-F770-472E-A3EB-F9E589C49E63} = {5B6C1688-803C-4C43-8D08-27E0F08A4952}
 		{1EB430CB-0188-4D86-87CA-350260E4F81E} = {5B6C1688-803C-4C43-8D08-27E0F08A4952}
 		{DA9A5C22-006F-4866-8605-41BE17C98551} = {DA099605-8D18-446F-A305-86396B5E93E5}
+		{8BFF3D64-ECE4-4565-A816-2190C1E8DC19} = {474222B2-49E2-4B05-8728-CD1802EB6ADA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4B1C8771-CA5F-474A-9637-AB6D3E7F8234}
