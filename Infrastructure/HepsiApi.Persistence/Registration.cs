@@ -1,6 +1,8 @@
 ﻿using HepsiApi.Application.Interfaces.Repositories;
+using HepsiApi.Application.Interfaces.UnitOfWorks;
 using HepsiApi.Persistence.Context;
 using HepsiApi.Persistence.Repositories;
+using HepsiApi.Persistence.UnitOfWorks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -18,7 +20,12 @@ namespace HepsiApi.Persistence
         {
             services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(
                 configuration.GetConnectionString("DefaultConnection")));
+
             services.AddScoped(typeof(IReadRepositories<>), typeof(ReadRepository<>));
+            services.AddScoped(typeof(IWriteRepositories<>), typeof(WriteRepository<>));
+
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+
         }
 
 
