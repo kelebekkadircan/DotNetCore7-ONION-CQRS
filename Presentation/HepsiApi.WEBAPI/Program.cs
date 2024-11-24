@@ -1,6 +1,7 @@
 using HepsiApi.Persistence;
 using HepsiApi.Application;
 using HepsiApi.Mapper;
+using HepsiApi.Application.Exceptions;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +12,8 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+//builder.Services.AddScoped<ExceptionMiddleware>();
+
 
 
 var env = builder.Environment;
@@ -26,6 +29,8 @@ builder.Services.AddApplication();
 builder.Services.AddCustomMapper();
 
 var app = builder.Build();
+
+app.ConfigureExceptionHandlingMiddleware();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
