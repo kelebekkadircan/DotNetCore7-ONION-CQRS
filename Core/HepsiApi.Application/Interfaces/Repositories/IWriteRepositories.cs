@@ -18,6 +18,8 @@ namespace HepsiApi.Application.Interfaces.Repositories
 
         Task HardDeleteAsync(T entity);
 
+        Task HardDeleteRangeAsync(IList<T> entities);
+
 
     }
 }
