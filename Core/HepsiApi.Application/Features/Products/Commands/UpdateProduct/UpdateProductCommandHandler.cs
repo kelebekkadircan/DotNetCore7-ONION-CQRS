@@ -1,7 +1,9 @@
-﻿using HepsiApi.Application.Interfaces.AutoMapper;
+﻿using HepsiApi.Application.Bases;
+using HepsiApi.Application.Interfaces.AutoMapper;
 using HepsiApi.Application.Interfaces.UnitOfWorks;
 using HepsiApi.Domain.Entities;
 using MediatR;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,17 +12,13 @@ using System.Threading.Tasks;
 
 namespace HepsiApi.Application.Features.Products.Commands.UpdateProduct
 {
-    public class UpdateProductCommandHandler : IRequestHandler<UpdateProductCommandRequest,Unit>
+    public class UpdateProductCommandHandler : BaseHandler , IRequestHandler<UpdateProductCommandRequest,Unit>
     {
-        private readonly IUnitOfWork _unitOfWork;
-        private readonly IMapper _mapper;
-        public UpdateProductCommandHandler( IUnitOfWork unitOfWork  , IMapper mapper) 
-        {
-            _unitOfWork = unitOfWork;
-            _mapper = mapper;
 
+        public UpdateProductCommandHandler(IUnitOfWork unitOfWork, IMapper mapper, IHttpContextAccessor httpContextAccessor) : base(unitOfWork, mapper, httpContextAccessor)
+        {
         }
-            
+
 
         public async Task<Unit> Handle(UpdateProductCommandRequest request, CancellationToken cancellationToken)
         {
