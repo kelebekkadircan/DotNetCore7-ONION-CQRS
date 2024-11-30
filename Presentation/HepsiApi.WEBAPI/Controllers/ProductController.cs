@@ -24,7 +24,7 @@ namespace HepsiApi.WEBAPI.Controllers
         [Authorize]
         public async Task<IActionResult> GetAllProducts()
         {
-            var response = await _mediator.Send(new GetAllProductsQueryRequest());
+            IList<GetAllProductsQueryResponse> response = await _mediator.Send(new GetAllProductsQueryRequest());
             return Ok(response);
         }
 

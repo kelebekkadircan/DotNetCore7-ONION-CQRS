@@ -3,6 +3,7 @@ using HepsiApi.Application.Bases;
 using HepsiApi.Application.Behaviors;
 using HepsiApi.Application.Exceptions;
 using HepsiApi.Application.Features.Products.Rules;
+using HepsiApi.Application.Interfaces.RedisCache;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -32,6 +33,10 @@ namespace HepsiApi.Application
             ValidatorOptions.Global.LanguageManager.Culture = new CultureInfo("tr-TR");
 
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(FluentValidationBehavior<,>));
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RedisCacheBehavior<,>));
+          
+
+
         }
 
         private static IServiceCollection AddRulesFromAssemblyContaining(this IServiceCollection services , Assembly assembly , Type type)
