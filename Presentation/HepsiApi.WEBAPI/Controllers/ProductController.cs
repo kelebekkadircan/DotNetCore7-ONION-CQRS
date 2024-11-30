@@ -4,7 +4,6 @@ using HepsiApi.Application.Features.Products.Commands.UpdateProduct;
 using HepsiApi.Application.Features.Products.Queries.GetAllProducts;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HepsiApi.WEBAPI.Controllers
@@ -50,6 +49,8 @@ namespace HepsiApi.WEBAPI.Controllers
             return Ok();
             
         }
+
+       
 
     }
 }
