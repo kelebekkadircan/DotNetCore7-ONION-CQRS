@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Features\Auth\Queries\**" />
+    <EmbeddedResource Remove="Features\Auth\Queries\**" />
+    <None Remove="Features\Auth\Queries\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="FluentValidation" Version="11.11.0" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.11.0" />
     <PackageReference Include="MediatR" Version="12.1.1" />
@@ -18,10 +24,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\HepsiApi.Domain\HepsiApi.Domain.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Features\Auth\Queries\" />
   </ItemGroup>
 
 </Project>
